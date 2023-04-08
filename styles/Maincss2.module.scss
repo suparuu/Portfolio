@@ -1,0 +1,28 @@
+.mainFlex{
+    background-color: aqua;
+    width: 100%;
+    height: 90vh;
+    .shapeAndText{
+        position: relative;
+        width: 80%;
+
+        .shape{
+            width: 150px;
+            height: 250px;
+            transform: skew(-40deg);
+            background-color: #F8D448;
+            z-index: 1;
+        }
+        .h1Text{
+            top: 50px;
+            left: 50px;
+            color: #263A96;
+            font-size: 24px;
+            z-index: 2;
+            position: absolute;
+            font-size: 200px;
+            font-weight: bold;
+        }
+    }
+
+}
