@@ -7,7 +7,7 @@
         height: 100vh;
         position: absolute;
         width: 60%;
-        clip-path: polygon(0% 0%, 100% 0%, 63% 100%, 0% 100%);
+        clip-path: polygon(0% 0%, 100% 0%, 40% 100%, 0% 100%);
         display: flex;
         justify-content: center;
 
@@ -54,7 +54,6 @@
 
     .blueBox {
         width: 52%;
-        border: #FFFFFF 1px solid;
         height: 100vh;
         float: right;
         position: relative;
@@ -63,26 +62,56 @@
 
         .rightcenterBox {
             width: 100%;
-            border: 1px solid #000;
-            height: 75%;
+            height: 60%;
             display: flex;
 
             .leftBox {
                 width: 25%;
-                border: 1px solid aqua;
                 .numberBox{
+                    position: relative;
+                    top: 40%;
+                    width: 100%;
+                    color: #5A81FA;
+                    font-weight: bold;
+                    font-size: 24px;
                     &::after{
                         content: '';
-                        border-bottom: 1px solid black;
+                        position: absolute;
+                        left: 30%;
+                        top: 50%;
+                        width: 50%;
+                        background-color: #5A81FA;
+                        height: 1px;
 
                     }
+                }
+                .nameBox{
+                    position: relative;
+                    width: 100%;
+                    color: #F8D448;
+                    font-size: 60px;
+                    top: 60%;
+                    font-weight: bold;
+                    font-style: italic;
+                }
+                .skillBox{
+                    position: relative;
+                    width: 100%;
+                    color: #ffffff;
+                    top: 65%;
+                    font-size: 20px;
+                    font-style: italic;
+
                 }
 
             }
 
             .rightBox {
-                width: 75%;
-
+                width: 100%;
+                position: relative;
+                overflow: hidden;
+                top: 15%;
+                
             }
 
         }

@@ -4,6 +4,7 @@ import { Main } from './component/Main'
 import { Header } from './component/Header'
 import { Test } from './component/Test'
 import { Projects } from './component/Projects'
+import { About } from './component/About'
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
     <main>
     <Test></Test>
     <Projects></Projects>
+    <About></About>
       {/* <Main></Main> */}
       
       </main>

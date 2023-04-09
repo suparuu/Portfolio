@@ -1,7 +1,33 @@
-import React from 'react'
-import Projectscss from "@/styles/Projectscss.module.scss";
+import React, { useEffect,  useState } from 'react'
+import Projectscss from "@/styles/Projectcss.module.scss";
+import Image from "next/image";
+
+//swiper js 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectFade, Navigation, Pagination } from "swiper";
+import "swiper/css";
+import "swiper/css/effect-fade";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+//
+
 
 export const Projects = () => {
+
+
+  const [Imgstate, setImgstate] = useState();
+
+  useEffect(() => {
+    let datas = [
+      { name: 'first project', url: '/jejubeer.png', id: 0, detail:'' },
+      { name: 'second project', url: '/ciga.png', id: 1 },
+      { name: 'third project', url: '/project_lol1.png', id: 2 },
+      { name: 'fourth project', url: '/project_lol2.png', id: 3 }
+    ]
+    setImgstate(datas)
+  }, [])//프로젝트 이미지, 내용, 이름 수정하기 및 기능 덜 했음 
+
+
   return (
     <>
       <div className={Projectscss.sectionBox}>
@@ -26,11 +52,44 @@ export const Projects = () => {
         <div className={Projectscss.blueBox}>
           <div className={Projectscss.rightcenterBox}>
             <div className={Projectscss.leftBox}>
-              <div className={Projectscss.numberBox}>1/4</div>
-              <div className={Projectscss.nameBox}>test2</div>
-              <div className={Projectscss.skillBox}>test3</div>
+              <div className={Projectscss.numberBox}>1 / 4</div>
+              <div className={Projectscss.nameBox}>Amipharm</div>
+              <div className={Projectscss.skillBox}>This is an important skill in creating</div>
             </div>
             <div className={Projectscss.rightBox}>
+              {
+              /* <div className={Projectscss.fourImgs}>
+              {
+                Imgstate && Imgstate.map((data,id) => {
+                  return (
+                    <div className={Projectscss.projectImgBox}>
+                      <img className={Projectscss.projectImg}src={data.url} alt={data.name}></img>
+                    </div>
+                  )
+                })
+              }
+              </div> */}
+              <Swiper
+                spaceBetween={30}
+                effect={"fade"}
+                navigation={true}
+                pagination={{ clickable: true, }}
+                modules={[EffectFade, Navigation, Pagination]}
+                className="mySwiper">
+
+                {
+                  Imgstate && Imgstate.map((data, id) => {
+                    return (
+                      <SwiperSlide>
+                        <img src={data.url} alt={data.name} style={{width:'100%'}}/>
+                      </SwiperSlide>
+                    )
+                  })
+                }
+              </Swiper>
+
+
+
             </div>
           </div>
         </div>
