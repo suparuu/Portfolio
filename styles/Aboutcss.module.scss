@@ -25,14 +25,13 @@
         width: 77%;
         background-color: #F7F8FC;
         margin: 0 auto;
-        top: 20%;
+        top: 25%;
         position: relative;
         border-radius: 20px;
         box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
 
         .leftBox {
             width: 50%;
-            border: 1px solid blueviolet;
             margin: 0 auto;
 
             .imgBox {
@@ -51,7 +50,6 @@
 
         .rightBox {
             width: 50%;
-            border: 1px solid red;
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
