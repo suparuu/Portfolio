@@ -19,10 +19,10 @@ export const Projects = () => {
 
   useEffect(() => {
     let datas = [
-      { name: 'first project', url: '/jejubeer.png', id: 0, detail:'' },
-      { name: 'second project', url: '/ciga.png', id: 1 },
-      { name: 'third project', url: '/project_lol1.png', id: 2 },
-      { name: 'fourth project', url: '/project_lol2.png', id: 3 }
+      { name: '제주맥주(클론코딩)', url: '/jejubeer.png', id: 0, detail:'' },
+      { name: '담배추천사이트', url: '/ciga.png', id: 1 },
+      { name: '롤 챔피언 정보', url: '/project_lol1.png', id: 2 },
+      { name: '음악앱', url: '/project_lol2.png', id: 3 }
     ]
     setImgstate(datas)
   }, [])//프로젝트 이미지, 내용, 이름 수정하기 및 기능 덜 했음 

@@ -1,49 +1,48 @@
-import Head from 'next/head'
-import styles from '@/styles/Home.module.css'
 import { Main } from './component/Main'
 import { Header } from './component/Header'
 import { Projects } from './component/Projects'
 import { About } from './component/About'
 import { Skills } from './component/Skills'
-import { useEffect, useState } from 'react'
-
+import { Newprojects } from './component/Newprojects'
+import { useEffect } from 'react'
+import { SectionsContainer, Section } from 'react-fullpage';
 export default function Home() {
 
-  const [scroll,setScroll] = useState(0);
-
-
-  useEffect(()=>{
-    window.addEventListener('scroll', function(){
-    const Main = document.querySelector('main')
-
-      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      if (scrollTop > 100) {
-        // do something when the user scrolls down more than 100 pixels
-
-        console.log(window.scrollY)
-        Main.style.transform=`translateY(-${window.innerHeight})`;
-        
-      }
-    });
-  },[])
-  
+  let options = {
+    activeClass: 'active', // the class that is appended to the sections links
+    anchors: ['sectionOne', 'sectionTwo', 'sectionThree', 'sectionFour'], // the anchors for each sections
+    arrowNavigation: false, // use arrow keys
+    className: 'SectionContainer', // the class name for the section container
+    delay: 1000, // the scroll animation speed
+    navigation: false, // use dots navigatio
+    scrollBar: false, // use the browser default scrollbar
+    sectionClassName: 'Section', // the section class name
+    sectionPaddingTop: '0', // the section top padding
+    sectionPaddingBottom: '0', // the section bottom padding
+    verticalAlign: false // align the content of each section vertical
+  };//SectionsContainer options 
 
 
   return (
     <>
-      <main style={{
-        /* position : 'fixed', */
-        top: '0',
-        left: '0',
-        width: '100%',
-        height: '100%'
-    }}
-    >
-        <Header></Header>
-        <Main></Main>
-        <Projects></Projects>
-        <About></About>
-        <Skills></Skills>
+      <main>
+        <SectionsContainer {...options}>
+          <Section>
+            {/* <Projects></Projects> */}
+            <Newprojects></Newprojects>
+          </Section>
+          <Section>
+            <Header></Header>
+            <Main></Main>
+          </Section>
+
+          <Section>
+            <About></About>
+          </Section>
+          <Section>
+            <Skills></Skills>
+          </Section>
+        </SectionsContainer>
       </main >
     </>
 
