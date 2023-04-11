@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import Newprojectscss from "@/styles/Newprojectscss.module.scss";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -23,11 +22,7 @@ export const Newprojects = () => {
             { name: '롤 챔피언 정보', url: '/project_lol1.png', id: 2 },
             { name: '음악앱', url: '/project_lol2.png', id: 3 }
         ]
-        setImgstate(datas)
     }, [])//프로젝트 이미지, 내용, 이름 수정하기 및 기능 덜 했음 
-
-
-
 
     return (
         <div className={Newprojectscss.sectionBox}>
@@ -44,14 +39,14 @@ export const Newprojects = () => {
             </div>
             <div className={Newprojectscss.rightBox}>
                 
-            <Swiper
+           <Swiper
         style={{
           "--swiper-navigation-color": "#fff",
           "--swiper-pagination-color": "#fff",
         }}
         spaceBetween={10}
         navigation={true}
-        thumbs={{ swiper: thumbsSwiper }}
+        thumbs={{ swiper : thumbsSwiper }}
         modules={[FreeMode, Navigation, Thumbs]}
         className="mySwiper2"
       >
@@ -67,24 +62,7 @@ export const Newprojects = () => {
         <SwiperSlide>
           <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
         </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-        </SwiperSlide>
+        
       </Swiper>
       <Swiper
         onSwiper={setThumbsSwiper}
@@ -107,26 +85,8 @@ export const Newprojects = () => {
         <SwiperSlide>
           <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
         </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-        </SwiperSlide>
+       
       </Swiper>
-
 
 
             </div>

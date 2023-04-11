@@ -5,6 +5,8 @@ import { About } from './component/About'
 import { Skills } from './component/Skills'
 import { Newprojects } from './component/Newprojects'
 import { useEffect } from 'react'
+import  Test  from './component/Test'
+
 import { SectionsContainer, Section } from 'react-fullpage';
 export default function Home() {
 
@@ -30,7 +32,9 @@ export default function Home() {
           <Section>
             {/* <Projects></Projects> */}
             <Newprojects></Newprojects>
+            {/* <Test></Test> */}
           </Section>
+
           <Section>
             <Header></Header>
             <Main></Main>
@@ -39,6 +43,7 @@ export default function Home() {
           <Section>
             <About></About>
           </Section>
+
           <Section>
             <Skills></Skills>
           </Section>
