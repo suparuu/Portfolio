@@ -42,7 +42,7 @@ export const Newprojects = () => {
       <div className={Newprojectscss.leftBox}>
         <div className={Newprojectscss.textBox}>
           <p className={Newprojectscss.pjName}>제주맥주</p>
-          <p className={Newprojectscss.pjDetail}>처음으로 하는 프로젝트 이기도 하고, 클론코딩을 부감없이 할 수 있을거라 생각하여 제주맥주 사이트를 클론코딩을 하게 되었습니다.
+          <p className={Newprojectscss.pjDetail}>처음으로 하는 프로젝트 이기도 하고, 클론코딩을 부담없이 할 수 있을거라 생각하여 제주맥주 사이트를 클론코딩을 하게 되었습니다.
           </p>
           <p className={Newprojectscss.pjSkill}>HTML5, CSS3, SCSS, JQuery 를 사용
             GitHub를 이용하여 사이트 배포
@@ -76,7 +76,7 @@ export const Newprojects = () => {
 
 
         <Swiper
-        style={{position:'absolute',bottom:'1%',width:'100%'}}
+        style={{position:'absolute',bottom:'10%',width:'100%'}}
           onSwiper={setThumbsSwiper}
           spaceBetween={10}
           slidesPerView={3}

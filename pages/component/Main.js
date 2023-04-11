@@ -1,8 +1,11 @@
 import React from 'react'
 import Maincss from "@/styles/Maincss.module.scss";
+import { Header } from './Header'
 
 export const Main = () => {
   return (
+    <>
+    <Header></Header>
     <div className={Maincss.mainFlex}>
       <div className={Maincss.shapeAndText}>
         <div className={Maincss.shapeBox}>
@@ -15,7 +18,7 @@ export const Main = () => {
         <br></br>
         <p className={Maincss.myName}>김경우 </p>
       </div>
-      {/* 마우스 스크롤 만들어야함 */}
     </div>
+    </>
   )
 }
