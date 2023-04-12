@@ -7,8 +7,9 @@ import { Newprojects } from './component/Newprojects'
 import { useEffect } from 'react'
 import Test from './component/Test'
 
-// import { SectionsContainer, Section } from 'react-fullpage';
+import { SectionsContainer, Section } from 'react-fullpage';
 //스크롤 이벤트 보류
+
 export default function Home() {
 
   // let options = {
