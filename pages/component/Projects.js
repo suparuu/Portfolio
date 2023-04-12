@@ -1,7 +1,7 @@
 import React, { useEffect,  useState } from 'react'
 import Projectscss from "@/styles/Projectcss.module.scss";
 import Image from "next/image";
-
+//안쓰는 컴포넌트
 //swiper js 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectFade, Navigation, Pagination } from "swiper";

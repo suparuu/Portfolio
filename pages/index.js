@@ -5,7 +5,8 @@ import { About } from './component/About'
 import { Skills } from './component/Skills'
 import { Newprojects } from './component/Newprojects'
 import { useEffect } from 'react'
-import Test from './component/Test'
+import { Otherskills } from './component/Otherskills'
+
 
 import { SectionsContainer, Section } from 'react-fullpage';
 //스크롤 이벤트 보류
