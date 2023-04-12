@@ -9,9 +9,10 @@
         width: 40%;
         background-color: #344AB1;
         position: relative;
+        padding: 40px;
 
         .textBox {
-            width: 75%;
+            width: 66%;
             margin: 0 auto;
             display: flex;
             justify-content: center;
@@ -25,11 +26,14 @@
                 font-size: 100px;
                 font-weight: 700;
                 color: #F8D448;
+            word-break: keep-all;
+
             }
             .pjDetail{
                 line-height: 2.75rem;
                 font-size: 28px;
-                color: #fff;
+            word-break: keep-all;
+            color: #fff;
 
 
             }
@@ -48,7 +52,7 @@
                 width: 12.5rem;
                 height: 3.125rem;
                 color: #fff;
-            
+                margin-top: 40px;
 
             }
 

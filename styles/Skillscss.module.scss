@@ -11,7 +11,7 @@
         .h2text {
             position: absolute;
             color: #263A96;
-            font-size: 44px;
+            font-size: 100px;
             font-weight: bold;
             z-index: 1;
             &::after{
@@ -31,10 +31,11 @@
         position: relative;
         margin: 0 auto;
         display: flex;
-        justify-content: space-around;
+        justify-content: flex-start;
         align-items: center;
         flex-wrap: wrap;
-        gap: 7px;
+        gap: 6.3%;
+        
         .skill{
             background-color: #F7F8FC;
             width: 20%;
@@ -42,13 +43,13 @@
             border-radius: 20px;
             box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
             margin-bottom: 10%;
-            padding: 20px;
+            padding: 3%;
             .imgBox{
                 position: absolute;
                 width: 6.25rem;
                 height: 6.25rem;
                 left: 50%;
-                transform: translate(-50%,-70%);
+                transform: translate(-50%,-80%);
                 background-color: #F7F8FC;
                 border-radius: 50%;
                 display: flex;
@@ -80,6 +81,9 @@
                     color: #263A96;
                     font-size: 16px;
                     padding-bottom: 40px;
+            word-break: keep-all;
+
+
 
                 }
                 

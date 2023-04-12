@@ -63,16 +63,6 @@ export const Skills = () => {
             })
           }
         </div>
-        <div className={Skillcss.otherskillsBox}>
-          <div className={Skillcss.otherImgText}>
-            <div className={Skillcss.otherImg}>
-              <img src='' alt=''></img>
-            </div>
-            <p className={Skillcss.otherDetail}></p>
-          </div>
-
-
-        </div>
       </div>
 
 
