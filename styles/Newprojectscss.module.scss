@@ -1,3 +1,15 @@
+@keyframes fadein{
+    0%{
+      transform: translateY(800px);
+      opacity: 0;
+    }
+    100%{
+      transform: none;
+      opacity: 1;
+
+    }
+}
+
 .sectionBox {
     width: 100%;
     height: 100vh;
@@ -16,6 +28,11 @@
             margin: 0 auto;
             top: 15%;
             position: relative;
+        .animate{
+            animation: fadein 0.5s ease-in-out;
+
+        }
+
 
             .pjName{
                 white-space: nowrap;
@@ -32,6 +49,7 @@
                 font-size: 20px;
             word-break: keep-all;
             color: #fff;
+            margin: 10% 0 10% 0;
 
 
             }
@@ -50,7 +68,12 @@
                 width: 12.5rem;
                 height: 3.125rem;
                 color: #fff;
-                margin-top: 40px;
+                margin-top: 20%;
+                cursor: pointer;
+                &:active{
+                    background-color: #F8D448;
+                    color: #344AB1;
+                }
 
             }
 
