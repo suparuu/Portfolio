@@ -13,17 +13,15 @@ import { FreeMode, Navigation, Thumbs } from "swiper";
 export const Newprojects = () => {
 
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
-  const [imgstate, setImgstate] = useState();
-  const [swiperIndex, setSwiperIndex] = useState(0);
+  const [imgstate, setImgstate] = useState(); //내가 만든 프로젝트 정보 담은 state
+  const [swiperIndex, setSwiperIndex] = useState(0);//초기값 0 으로 설정 , swiper index 담는 state
 
 
   //
 
   function getIndex(index) {
-    console.log(index)
-    console.log(imgstate)
     setSwiperIndex(index)
-  }//get swiper index
+  }//swiper index값을 state에 담는 함수
   useEffect(() => {
     let datas = [
       {
@@ -40,14 +38,14 @@ export const Newprojects = () => {
 
       },
       {
-        name: '롤 챔피언 정보', url: '/project_lol1.png', id: 2,
+        name: '롤API', url: '/project_lol1.png', id: 2,
         detail: "국비지원 학원에서 React라는 Javascript 라이브러리를 배웠고, 저의 취미인 게임중에서 리그오브레전드 라는 게임의 API를 호출하여 안에 있는 데이터들을 활용하기 위해 진행된 프로젝트입니다.",
         skills: 'Javascript, CSS, SCSS, React, JQuery, League of Legends API를 사용 GitHub를 이용하여 사이트 배포',
         site:'https://suparuu.github.io/Project_lol/'
 
       },
       {
-        name: '음악앱', url: '/project_lol2.png', id: 3,
+        name: '음악앱(SpotifyAPI)', url: '/project_lol2.png', id: 3,
         detail: 'React 에서 제공하는 라이브러리인 Nextjs 를 배웠고, CRUD를 활용하여 로그인기능 , 플레이리스트 기능을 ... <내용 추가 예정',
         skills: 'React, Next.js, mySQL, Spotify API 사용 CloudType을 이용하여 사이트 배포 <내용 추가 예정',
         site:'https://suparuu.github.io/Project_jejubeer/'
@@ -73,13 +71,7 @@ export const Newprojects = () => {
               )
             }
           })}
-          {/* <p className={Newprojectscss.pjName}>제주맥주</p>
-          <p className={Newprojectscss.pjDetail}>처음으로 하는 프로젝트 이기도 하고, 클론코딩을 부담없이 할 수 있을거라 생각하여 제주맥주 사이트를 클론코딩을 하게 되었습니다.
-          </p>
-          <p className={Newprojectscss.pjSkill}>HTML5, CSS3, SCSS, JQuery 를 사용
-            GitHub를 이용하여 사이트 배포
-          </p>
-          <div className={Newprojectscss.gotoProject}>자세히 보기</div> */}
+          
         </div>
       </div>
       <div className={Newprojectscss.rightBox}>
@@ -91,12 +83,10 @@ export const Newprojects = () => {
           }}
           spaceBetween={0}
           navigation={true}
+          onSlideChange={(e) => getIndex(e.realIndex)}
           thumbs={{ swiper: thumbsSwiper }}
           modules={[FreeMode, Navigation, Thumbs]}
-          className="mySwiper2"
-          onSlideChange={(e) => getIndex(e.realIndex)}
-        // onChangeIndex={this.onChangeIndex}
-        >
+          className="mySwiper2">
           {imgstate && imgstate.map((img, id) => {
             return (
               <SwiperSlide style={{ width: '100%' }}>
@@ -105,21 +95,16 @@ export const Newprojects = () => {
             )
           })}
 
-          {/* <div className="swiper-button-prev" ref={swiperPrev} onClick={''}></div>
-<div className="swiper-button-next" ref={swiperNext}></div> */}
 
         </Swiper>
-
-
-
         <Swiper
-          style={{ position: 'absolute', bottom: '10%', width: '100%' }}
+          style={{ position: 'absolute', bottom: '0',padding:'5%', width: '100%' }}
           onSwiper={setThumbsSwiper}
           spaceBetween={10}
           slidesPerView={3}
           freeMode={false}
           watchSlidesProgress={false}
-          modules={[FreeMode, Navigation, Thumbs]}
+          modules={[FreeMode, Navigation, Thumbs ]}
           className="mySwiper"
         >
           {imgstate && imgstate.map((img, id) => {
@@ -127,12 +112,10 @@ export const Newprojects = () => {
               <SwiperSlide >
                 <img src={img.url} style={{ width: '100%' }} />
               </SwiperSlide>
-
             )
           })}
 
         </Swiper>
-
 
       </div>
     </div>

@@ -14,31 +14,29 @@
         .textBox {
             width: 66%;
             margin: 0 auto;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            flex-wrap: wrap;
-            gap: 30px;
             top: 15%;
             position: relative;
 
             .pjName{
+                white-space: nowrap;
                 font-size: 100px;
                 font-weight: 700;
                 color: #F8D448;
             word-break: keep-all;
+            z-index: 2;
+            position: relative;
 
             }
             .pjDetail{
                 line-height: 2.75rem;
-                font-size: 28px;
+                font-size: 20px;
             word-break: keep-all;
             color: #fff;
 
 
             }
             .pjSkill{
-                font-size: 20px;
+                font-size: 16px;
                 color: #fff;
 
 
