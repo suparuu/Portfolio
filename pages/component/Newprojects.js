@@ -16,17 +16,31 @@ export const Newprojects = () => {
   const [imgstate, setImgstate] = useState(); //내가 만든 프로젝트 정보 담은 state
   const [swiperIndex, setSwiperIndex] = useState(0);//초기값 0 으로 설정 , swiper index 담는 state
   const [animation , setAnimation] = useState(false);//초기값 false , 버튼 눌렀을 때 true
+  const test = useRef();
 
   const handleExternalLink = (url) => {
     window.location.href = url;
   };//내 사이트로 보내주는 함수
+
+
   function getIndex(index) {
     setSwiperIndex(index)
     setAnimation(true);
+    handleClick()
+  }//swiper index값을 state에 담는 함수 , 애니메이션 실행
+
+  function handleClick(){
+    test.current.classList.add('animate');
+    // test.current.style = ' opacity : 0; transform : translateY(50%)'
+    console.log('working')
     setTimeout(()=>{
-      setAnimation(false);
+      test.current.classList.remove('animate');
+    // test.current.style = ' opacity : 1; animation : fadein'
+
+
     },500)
-  }//swiper index값을 state에 담는 함수
+}
+
   useEffect(() => {
     let datas = [
       {
@@ -59,19 +73,16 @@ export const Newprojects = () => {
     ]
     setImgstate(datas)
   }, [])//프로젝트 이미지, 내용, 이름 수정하기 및 기능 덜 했음 
-  function handleClick(){
-    setAnimation(true);
-    setTimeout(()=>{
-      setAnimation(false);
-    },500)
-  }
 
+
+ 
+
+  console.log(test.current.style , ' ')
 
   return (
     <div className={Newprojectscss.sectionBox}>
       <div className={Newprojectscss.leftBox}>
-        {/* <div className={Newprojectscss.textBox}> */}
-        <div className={Newprojectscss.textBox}>
+        <div className={Newprojectscss.textBox} ref={test}>
           {imgstate && imgstate.map((obj, index) => {
             if(index == swiperIndex){
               return (

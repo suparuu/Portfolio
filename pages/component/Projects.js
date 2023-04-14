@@ -1,7 +1,7 @@
 import React, { useEffect,  useState } from 'react'
 import Projectscss from "@/styles/Projectcss.module.scss";
-import Image from "next/image";
 //안쓰는 컴포넌트
+
 //swiper js 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectFade, Navigation, Pagination } from "swiper";
@@ -9,7 +9,6 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-//
 
 
 export const Projects = () => {
@@ -25,7 +24,7 @@ export const Projects = () => {
       { name: '음악앱', url: '/project_lol2.png', id: 3 }
     ]
     setImgstate(datas)
-  }, [])//프로젝트 이미지, 내용, 이름 수정하기 및 기능 덜 했음 
+  }, [])//프로젝트 이미지, 내용,  음악앱 이미지 따기
 
 
   return (
@@ -57,18 +56,7 @@ export const Projects = () => {
               <div className={Projectscss.skillBox}>This is an important skill in creating</div>
             </div>
             <div className={Projectscss.rightBox}>
-              {
-              /* <div className={Projectscss.fourImgs}>
-              {
-                Imgstate && Imgstate.map((data,id) => {
-                  return (
-                    <div className={Projectscss.projectImgBox}>
-                      <img className={Projectscss.projectImg}src={data.url} alt={data.name}></img>
-                    </div>
-                  )
-                })
-              }
-              </div> */}
+              
               <Swiper
                 spaceBetween={30}
                 effect={"fade"}
