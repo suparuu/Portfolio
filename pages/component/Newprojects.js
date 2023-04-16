@@ -120,7 +120,7 @@ export const Newprojects = () => {
           className="mySwiper2">
           {imgstate && imgstate.map((img, id) => {
             return (
-              <SwiperSlide style={{ width: '100%' }}>
+              <SwiperSlide style={{ width: '100%' }} key={id}>
                 <img src={img.url} alt={img.alt}style={{ width: '100%', height: '100vh', objectFit: 'cover' }} />
                 {/* <Image src={img.url} alt={img.alt}  layout='fill'   style={{ width: '100%',  objectFit: 'cover' }} /> */ }
               </SwiperSlide>
@@ -141,7 +141,7 @@ export const Newprojects = () => {
         >
           {imgstate && imgstate.map((img, id) => {
             return (
-              <SwiperSlide >
+              <SwiperSlide key={id}>
                 {/* <Image src={img.url} layout='fill' alt={img.alt} style={{ width: '100%' }} /> */}
                 <img src={img.url}  alt={img.alt} style={{ width: '100%'}} />
               </SwiperSlide>

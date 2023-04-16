@@ -70,7 +70,7 @@ export const Skills = () => {
         {
           frontSkill && frontSkill.map((obj, i) => {
             return (
-              <div className={Skillcss.skill}>
+              <div className={Skillcss.skill } key={i}>
                 <div className={Skillcss.imgBox}>
                   <Image src={obj.url} alt={obj.alt} width={100} height={100}></Image>
                 </div>
