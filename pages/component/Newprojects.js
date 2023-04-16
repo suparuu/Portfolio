@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Newprojectscss from "@/styles/Newprojectscss.module.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Image from 'next/image'
 
 // Import Swiper styles
 import "swiper/css";
@@ -47,27 +48,34 @@ export const Newprojects = () => {
         name: '제주맥주(클론코딩)', url: '/jejubeer.png', id: 0,
         detail: '처음으로 하는 프로젝트 이기도 하고, 클론코딩을 부담없이 할 수 있을거라 생각하여 제주맥주 사이트를 클론코딩을 하게 되었습니다.',
         skills: "HTML5, CSS3, SCSS, JQuery 를 사용 GitHub를 이용하여 사이트 배포",
-        site:'https://suparuu.github.io/Project_jejubeer/'
+        site:'https://suparuu.github.io/Project_jejubeer/',
+        alt:'첫 프로젝트'
       },
       {
         name: '롤API', url: '/project_lol1.png', id: 2,
         detail: "국비지원 학원에서 React라는 Javascript 라이브러리를 배웠고, 저의 취미인 게임중에서 리그오브레전드 라는 게임의 API를 호출하여 안에 있는 데이터들을 활용하기 위해 진행된 프로젝트입니다.",
         skills: 'Javascript, CSS, SCSS, React, JQuery, League of Legends API를 사용 GitHub를 이용하여 사이트 배포',
-        site:'https://suparuu.github.io/Project_lol/'
+        site:'https://suparuu.github.io/Project_lol/',
+        alt:'LOL Api를 활용한 프로젝트'
+
 
       },
       {
         name: '음악앱(SpotifyAPI)', url: '/project_lol2.png', id: 3,
         detail: 'React 에서 제공하는 라이브러리인 Nextjs 를 배웠고, CRUD를 활용하여 로그인기능 , 플레이리스트 기능을 ... <내용 추가 예정',
         skills: 'React, Next.js, mySQL, Spotify API 사용 CloudType을 이용하여 사이트 배포 <내용 추가 예정',
-        site:'https://suparuu.github.io/Project_jejubeer/'
+        site:'https://suparuu.github.io/Project_jejubeer/',
+        alt:'Spotify Api를 활용한 프로젝트'
+
 
       },
       {
         name: '담배추천사이트', url: '/ciga.png', id: 1,
         detail: '팀원 들과 협의를 해서 공통적으로 좋아하는 것이 담배 였는데, 비 흡연자도 사이트를 한번 쯤은 방문하게 끔 만들자 라고 생각해서 사이트를 만들게 되었습니다.',
         skills: "HTML, CSS, SCSS, Javascript, JSON , JQuery를 사용 GitHub를 이용하여 사이트 배포",
-        site:'https://suparuu.github.io/Project_Ciga/'
+        site:'https://suparuu.github.io/Project_Ciga/',
+        alt:'첫 팀 프로젝트'
+
 
       },
     ]
@@ -113,7 +121,8 @@ export const Newprojects = () => {
           {imgstate && imgstate.map((img, id) => {
             return (
               <SwiperSlide style={{ width: '100%' }}>
-                <img src={img.url} style={{ width: '100%', height: '100vh', objectFit: 'cover' }} />
+                <img src={img.url} alt={img.alt}style={{ width: '100%', height: '100vh', objectFit: 'cover' }} />
+                {/* <Image src={img.url} alt={img.alt}  layout='fill'   style={{ width: '100%',  objectFit: 'cover' }} /> */ }
               </SwiperSlide>
             )
           })}
@@ -133,7 +142,8 @@ export const Newprojects = () => {
           {imgstate && imgstate.map((img, id) => {
             return (
               <SwiperSlide >
-                <img src={img.url} style={{ width: '100%' }} />
+                {/* <Image src={img.url} layout='fill' alt={img.alt} style={{ width: '100%' }} /> */}
+                <img src={img.url}  alt={img.alt} style={{ width: '100%'}} />
               </SwiperSlide>
             )
           })}

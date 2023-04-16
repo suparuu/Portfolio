@@ -1,11 +1,7 @@
 import { Main } from './component/Main'
-import { Header } from './component/Header'
-import { Projects } from './component/Projects'
 import { About } from './component/About'
 import { Skills } from './component/Skills'
 import { Newprojects } from './component/Newprojects'
-import { useEffect } from 'react'
-
 
 import { SectionsContainer, Section } from 'react-fullpage';
 //스크롤 이벤트 보류

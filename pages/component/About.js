@@ -15,7 +15,7 @@ export const About = () => {
         <div className={Aboutcss.aboutBox}>
 
           <div className={Aboutcss.leftBox}>
-              <img className={Aboutcss.myImg} src='/AboutmeImg.jpg' />
+              <img className={Aboutcss.myImg} src='/AboutmeImg.jpg' alt='제 사진입니다.' />
           </div>
 
           <div className={Aboutcss.rightBox}>
