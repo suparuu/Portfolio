@@ -77,7 +77,6 @@ export const Newprojects = () => {
 
  
 
-  console.log(test.current.style , ' ')
 
   return (
     <div className={Newprojectscss.sectionBox}>

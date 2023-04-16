@@ -6,12 +6,13 @@
 }
 @keyframes fadein{
   0% {
-    background-color: black;
     transform: translate3d(0, 100%, 0);
+    opacity: 0;
 }
  100%{
-  background-color: white;
     transform: translateZ(0);
+    opacity: 1;
+
 }
 }
 

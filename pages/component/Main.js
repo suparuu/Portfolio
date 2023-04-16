@@ -2,7 +2,10 @@ import React from 'react'
 import Maincss from "@/styles/Maincss.module.scss";
 import { Header } from './Header'
 
+
 export const Main = () => {
+
+  
   return (
     <>
     <Header></Header>

@@ -3,26 +3,34 @@
     width: 100%;
     display: flex;
     justify-content: center;
-
+    .parallelogramBox{
+        width: 85%;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        .parallelogram{
+            width: 15px;
+            height: 20px;
+            transform: skew(-50deg);
+            background-color: #F8D448;
+            margin: 0 10px;
+            padding-top: 10px;
+        }
+        .myname{
+            color: #263A96;
+            font-size: 24px;
+            font-weight: bold;
+    
+        }
+    }
 }
 
-.parallelogramBox{
-    width: 85%;
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    .parallelogram{
-        width: 15px;
-        height: 20px;
-        transform: skew(-50deg);
-        background-color: #F8D448;
-        margin: 0 10px;
-        padding-top: 10px;
-    }
-    .myname{
-        color: #263A96;
-        font-size: 24px;
-        font-weight: bold;
-
+//모바일
+@media screen and (max-width:768px) {
+    .header{
+        max-width:768px;
+        .parallelogramBox{
+            justify-content: center;
+        }
     }
 }

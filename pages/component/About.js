@@ -1,5 +1,6 @@
 import React from 'react'
 import Aboutcss from "@/styles/Aboutcss.module.scss";
+import Image from 'next/image'
 
 export const About = () => {
 

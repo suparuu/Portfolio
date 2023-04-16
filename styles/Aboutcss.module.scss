@@ -16,9 +16,9 @@
             font-size: 100px;
             font-weight: bold;
             z-index: 1;
-  font-family: 'Pretendard-Regular';
-            
-            &::after{
+            font-family: 'Pretendard-Regular';
+
+            &::after {
                 position: absolute;
                 top: 50%;
                 content: '';
@@ -35,7 +35,6 @@
     .aboutBox {
         display: flex;
         width: 77%;
-        height: 50%;
         background-color: #F7F8FC;
         margin: 0 auto;
         position: relative;
@@ -49,13 +48,13 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            
-                .myImg {
-                    width: 70%;
-                    border-radius: 20px;
 
-                }
-            
+            .myImg {
+                width: 70%;
+                border-radius: 20px;
+
+            }
+
 
         }
 
@@ -87,4 +86,100 @@
             }
         }
     }
+}
+
+
+//테블릿
+@media screen and (max-width:1024px) {
+    .sectionBox {
+        max-width: 1024px;
+
+        .aboutBox {
+            flex-direction: column;
+            padding: 4.25rem;
+            margin-top: 10%;
+
+            .leftBox {
+                width: 50%;
+            }
+
+            .rightBox {
+                width: 100%;
+                align-items: center;
+                margin-top: 10%;
+
+                .myName {
+                    font-size: 42px;
+                    margin-bottom: 10%;
+                    text-align: center;
+
+                }
+
+                .relate {
+                    margin-bottom: 5%;
+                    text-align: center;
+
+                }
+
+                .detail {
+                    margin-bottom: 5%;
+                    text-align: center;
+                    
+                }
+            }
+        }
+    }
+
+}
+
+//모바일 컨펌후 수정
+@media screen and (max-width:768px) {
+    .sectionBox {
+        max-width: 768px;
+        height: auto;
+
+        .textBox {
+            .text {
+                font-size: 80px;
+            }
+
+        }
+
+        .aboutBox {
+            flex-direction: column;
+            padding: 20px;
+            margin-top: 20%;
+
+            .leftBox {
+                width: 100%;
+            }
+
+            .rightBox {
+                width: 100%;
+                align-items: center;
+                margin-top: 10%;
+
+
+                .myName {
+                    font-size: 42px;
+                    margin-bottom: 10%;
+                    text-align: center;
+                }
+
+                .relate {
+                    margin-bottom: 5%;
+                    text-align: center;
+
+                }
+
+                .detail {
+                    margin-bottom: 5%;
+                    word-break: normal;
+                    text-align: center;
+
+                }
+            }
+        }
+    }
+
 }
