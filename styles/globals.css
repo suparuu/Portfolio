@@ -15,6 +15,15 @@
 
 }
 }
+@keyframes fadeani{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+
+  }
+}
 
 * {
   box-sizing: border-box;
@@ -54,6 +63,8 @@ main::-webkit-scrollbar {
   .swiper-thumbs{
     display: none !important ;
   }
-
+  .animate{
+    animation: fadeani 0.5s;
+  }
   
 }
