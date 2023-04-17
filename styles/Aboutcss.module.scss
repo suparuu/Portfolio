@@ -93,6 +93,15 @@
 @media screen and (max-width:1024px) {
     .sectionBox {
         max-width: 1024px;
+        height: auto;
+
+        .textBox {
+    
+            .text {
+                font-size: 80px;
+            }
+    
+        }
 
         .aboutBox {
             flex-direction: column;
@@ -109,7 +118,7 @@
                 margin-top: 10%;
 
                 .myName {
-                    font-size: 42px;
+                    font-size: 30px;
                     margin-bottom: 10%;
                     text-align: center;
 
@@ -124,6 +133,7 @@
                 .detail {
                     margin-bottom: 5%;
                     text-align: center;
+                    line-height: 1.4;
                     
                 }
             }
@@ -140,7 +150,7 @@
 
         .textBox {
             .text {
-                font-size: 80px;
+                font-size: 60px;
             }
 
         }
@@ -161,7 +171,7 @@
 
 
                 .myName {
-                    font-size: 42px;
+                    font-size: 30px;
                     margin-bottom: 10%;
                     text-align: center;
                 }
@@ -173,9 +183,7 @@
                 }
 
                 .detail {
-                    margin-bottom: 5%;
-                    word-break: normal;
-                    text-align: center;
+                    display: none;
 
                 }
             }

@@ -41,3 +41,19 @@ main::-webkit-scrollbar {
 .animate {
   animation: fadein 0.5s;
 }
+
+.swiper-thumbs{
+  position: absolute;
+  bottom: 0;
+  padding: 5%;
+  width: 100%;
+}
+
+@media screen and (max-width:1024px) {
+
+  .swiper-thumbs{
+    display: none !important ;
+  }
+
+  
+}

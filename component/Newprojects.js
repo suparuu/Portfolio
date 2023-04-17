@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Newprojectscss from "@/styles/Newprojectscss.module.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Image from 'next/image'
 
 // Import Swiper styles
 import "swiper/css";
