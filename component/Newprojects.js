@@ -15,27 +15,26 @@ export const Newprojects = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [imgstate, setImgstate] = useState(); //내가 만든 프로젝트 정보 담은 state
   const [swiperIndex, setSwiperIndex] = useState(0);//초기값 0 으로 설정 , swiper index 담는 state
-  const [animation , setAnimation] = useState(false);//초기값 false , 버튼 눌렀을 때 true
-  const test = useRef();
+  const animation = useRef();
 
   const handleExternalLink = (url) => {
-    window.location.href = url;
+    // window.location.href = url;
+    window.open(url)
   };//내 사이트로 보내주는 함수
 
 
   function getIndex(index) {
     setSwiperIndex(index)
-    setAnimation(true);
     handleClick()
   }//swiper index값을 state에 담는 함수 , 애니메이션 실행
 
   function handleClick(){
-    test.current.classList.add('animate');
-    // test.current.style = ' opacity : 0; transform : translateY(50%)'
+    animation.current.classList.add('animate');
+    // animation.current.style = ' opacity : 0; transform : translateY(50%)'
     console.log('working')
     setTimeout(()=>{
-      test.current.classList.remove('animate');
-    // test.current.style = ' opacity : 1; animation : fadein'
+      animation.current.classList.remove('animate');
+    // animation.current.style = ' opacity : 1; animation : fadein'
 
 
     },500)
@@ -88,7 +87,7 @@ export const Newprojects = () => {
   return (
     <div className={Newprojectscss.sectionBox}>
       <div className={Newprojectscss.leftBox}>
-        <div className={Newprojectscss.textBox} ref={test}>
+        <div className={Newprojectscss.textBox} ref={animation}>
           {imgstate && imgstate.map((obj, index) => {
             if(index == swiperIndex){
               return (
@@ -96,7 +95,7 @@ export const Newprojects = () => {
                   <p className={Newprojectscss.pjName}>{obj.name}</p>
                   <p className={Newprojectscss.pjDetail}>{obj.detail}</p>
                   <p className={Newprojectscss.pjSkill}>{obj.skills}</p>
-                  <div className={Newprojectscss.gotoProject} onClick={()=>{handleExternalLink(obj.site)}}>자세히 보기</div>
+                  <div key={index} className={Newprojectscss.gotoProject} onClick={()=>{handleExternalLink(obj.site)}}>자세히 보기</div>
                 </>
               )
             }
