@@ -61,60 +61,69 @@
 
 //테블릿 
 @media screen and (max-width:1024px) {
-.mainFlex {
-    max-width:1024px;
-    .shapeAndText {
+    .mainFlex {
+        max-width: 1024px;
 
-        .shapeBox {
-            width: 100%;
+        .shapeAndText {
+
+            .shapeBox {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                position: relative;
+
+                .shape {
+                    width: 200px;
+                    height: 160px;
+                }
+
+                .h1Text {
+                    font-size: 100px;
+                }
+            }
+        }
+
+        .whoamI {
+            width: 40%;
             display: flex;
             justify-content: center;
-            position: relative;
-            .shape {
-                width: 200px;
-                height: 160px;
+            align-items: center;
+            flex-direction: column;
+            margin: 0 auto;
+            left: 0;
+            top: 35%;
+
+            .aspiration {
+                font-size: 20px;
             }
-            .h1Text {
-                font-size: 100px;
+
+            .myName {
+                font-size: 20px;
             }
         }
     }
-    .whoamI {
-        width: 40%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        margin: 0 auto;
-        left: 0;
-        top: 35%;
 
-        .aspiration {
-            font-size: 20px;
-        }
-        .myName {
-            font-size: 20px;
-        }
-    }
+
 }
 
-    
-}
 @media screen and (max-width:768px) {
     .mainFlex {
-        max-width:768px;
+        max-width: 768px;
+
         .shapeAndText {
-    
+
             .shapeBox {
                 .shape {
                     width: 160px;
                     height: 128px;
                 }
+
                 .h1Text {
                     font-size: 80px;
                 }
             }
         }
+
         .whoamI {
             width: 80%;
         }

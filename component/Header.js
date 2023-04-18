@@ -1,97 +1,89 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from "react";
 import Headcss from "@/styles/Headcss.module.scss";
 
-export const Header = () => {
+export const Header = ({sendP}) => {
 
-    //usestate 이용해서 반응형 width 사이즈 일때 메뉴바 나오게 
-    const [menubar, setMenubar] = useState(false);
-    const [mobMenu, setMobMenu] = useState(false);
-    const test = useRef();
-
-    useEffect(() => {
-        function tabletSize() {
-            if (window.innerWidth > 1024) {
-                setMenubar(false);
-            } else {
-                setMenubar(true);
-
-            }
-
-            window.addEventListener('resize', tabletSize);
-
-            return () => {
-                window.removeEventListener('resize', tabletSize);
-            };
-        }
-        tabletSize()
+    
+  const [menubar, setMenubar] = useState(false); //헤더 반응형  state
+  const [headerMenu, setHeaderMenu] = useState();
+  const mobHeader = useRef();
+  const menuevent = useRef();
 
 
-    }, [])
-    console.log(test.current, 'test')
+  useEffect(() => {
+    function tabletSize() {
+      if (window.innerWidth > 1024) {
+        setMenubar(false);
+      } else {
+        setMenubar(true);
+      }
 
-    function handleClick() {
-        let child = test.current.children;
-        let i = 0
-        for (i = 0; i < 3; i++) {
+      window.addEventListener("resize", tabletSize);
 
-            if (i === 0) {
-                child[i].classList.toggle('linedown')
-
-            } else if (i === 1) {
-                child[i].classList.toggle('fadeout')
-
-            } else {
-                child[i].classList.toggle('lineup')
-            }
-
-        }
-        test.current.classList.toggle('animate');
-
+      return () => {
+        window.removeEventListener("resize", tabletSize);
+      };
     }
+    tabletSize();
+    setHeaderMenu(sendP);
+  }, []); //헤더 반응형
 
 
-    return (
-        <>
-            <header className={Headcss.header}>
-                <div className={Headcss.parallelogramBox}  >
-                    <div className={Headcss.parallelogram}></div>
-                    <p className={Headcss.myname}>Kyung Woo Kim</p>
-                </div>
-                {
-                    menubar ? (
-                        <div className={Headcss.right}>
+console.log(headerMenu,'props')
+  function view(i){
+    headerMenu&&headerMenu[i].scrollIntoView({ behavior: "smooth"})
+  }
 
-                            <div className={Headcss.menubar} onClick={() => handleClick()} >
-                                <div className={Headcss.spans} ref={test}>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </div>
-                            </div>
-                            <ul className={Headcss.menudown}>
-                <li>Home</li>
-                <li>Projects</li>
-                <li>About</li>
-                <li>Skill</li>
+  function handleClick() {
+    let child = mobHeader.current.children;
+    let i = 0;
+    for (i = 0; i < 3; i++) {
+      if (i === 0) {
+        child[i].classList.toggle("linedown");
+      } else if (i === 1) {
+        child[i].classList.toggle("fadeout");
+      } else {
+        child[i].classList.toggle("lineup");
+      }
+    }
+    mobHeader.current.classList.toggle("animate");
+    menuevent.current.classList.toggle("active");
+  } //헤더 버튼 애니메이션
+
+
+
+  return (
+    <>
+      <header className={Headcss.header}>
+        <div className={Headcss.parallelogramBox}>
+          <div className={Headcss.parallelogram}></div>
+          <p className={Headcss.myname}>Kyung Woo Kim</p>
+        </div>
+        {menubar ? (
+          <div className={Headcss.right}>
+            <div className={Headcss.menubar} onClick={() => handleClick()}>
+              <div className={Headcss.spans} ref={mobHeader}>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <ul className={Headcss.menudown} ref={menuevent}>
+              <li onClick={() => {view(0)}}>Home</li>
+              <li onClick={() => {view(1)}}>Projects</li>
+              <li onClick={() => {view(2)}}>About</li>
+              <li onClick={() => {view(3)}}>Skill</li>
             </ul>
-                        </div>
-                        
-
-                    ) : (
-                        <div className={Headcss.right}>
-                            <a>Home</a>
-                            <a>Projects</a>
-                            <a>About</a>
-                            <a>Skill</a>
-                        </div>
-                        
-                    )
-                }
-
-            </header>
-
-            
-        </>
-
-    )
-}
+          </div>
+        ) : (
+          <nav className={Headcss.right}>
+            <a onClick={() => {view(0)}}>Home</a>
+            <a onClick={() => {view(1)}}>Projects</a>
+            <a onClick={() => {view(2)}}>About</a>
+            <a onClick={() => {view(3)}}>Skills</a>
+          </nav>
+        )}
+      </header>
+    </>
+  );
+};

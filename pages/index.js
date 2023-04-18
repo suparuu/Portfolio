@@ -1,42 +1,31 @@
-import { Main } from '../component/Main'
-import { About } from '../component/About'
-import { Skills } from '../component/Skills'
-import { Newprojects } from '../component/Newprojects'
-import { Footer } from '../component/Footer'
-
+import { Main } from "../component/Main";
+import { About } from "../component/About";
+import { Skills } from "../component/Skills";
+import { Newprojects } from "../component/Newprojects";
+import { Footer } from "../component/Footer";
+import { Header } from "../component/Header";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [sendP, setSendP] = useState();
+  let Scrolls;
+  useEffect(()=>{
+     Scrolls = document.querySelectorAll('section')
+     setSendP(Scrolls);
 
-  
+  },[])
 
 
   return (
     <>
-      {/* <main>
-        <SectionsContainer {...options}>
-          <Section>
-            <Main></Main>
-          </Section>
-          <Section>
-            <Newprojects></Newprojects>
-          </Section>
-          <Section>
-            <About></About>
-          </Section> 
-           <Section>
-            <Skills></Skills>
-          </Section>
-        </SectionsContainer>
-      </main > */}
-       <main>
-            <Main></Main>
-            <Newprojects></Newprojects>
-            <About></About>
-            <Skills></Skills>
-            <Footer></Footer>
-      </main >
+      <main>
+        <Header sendP={sendP}></Header>
+        <Main></Main>
+        <Newprojects></Newprojects>
+        <About></About>
+        <Skills></Skills>
+        <Footer></Footer>
+      </main>
     </>
-
-
-  )
+  );
 }
