@@ -1,14 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import Headcss from "@/styles/Headcss.module.scss";
 
-export const Header = ({sendP}) => {
-
-    
+export const Header = ({ sendP }) => {
   const [menubar, setMenubar] = useState(false); //헤더 반응형  state
-  const [headerMenu, setHeaderMenu] = useState();
   const mobHeader = useRef();
   const menuevent = useRef();
-
 
   useEffect(() => {
     function tabletSize() {
@@ -25,13 +21,13 @@ export const Header = ({sendP}) => {
       };
     }
     tabletSize();
-    setHeaderMenu(sendP);
+ 
   }, []); //헤더 반응형
 
-
-console.log(headerMenu,'props')
-  function view(i){
-    headerMenu&&headerMenu[i].scrollIntoView({ behavior: "smooth"})
+  function view(i) {
+    console.log(sendP, "asd");
+    sendP && sendP[i].scrollIntoView({ behavior: "smooth" });
+    console.log("hello");
   }
 
   function handleClick() {
@@ -50,8 +46,6 @@ console.log(headerMenu,'props')
     menuevent.current.classList.toggle("active");
   } //헤더 버튼 애니메이션
 
-
-
   return (
     <>
       <header className={Headcss.header}>
@@ -69,18 +63,66 @@ console.log(headerMenu,'props')
               </div>
             </div>
             <ul className={Headcss.menudown} ref={menuevent}>
-              <li onClick={() => {view(0)}}>Home</li>
-              <li onClick={() => {view(1)}}>Projects</li>
-              <li onClick={() => {view(2)}}>About</li>
-              <li onClick={() => {view(3)}}>Skill</li>
+              <li
+                onClick={() => {
+                  view(0);
+                }}
+              >
+                Home
+              </li>
+              <li
+                onClick={() => {
+                  view(1);
+                }}
+              >
+                Projects
+              </li>
+              <li
+                onClick={() => {
+                  view(2);
+                }}
+              >
+                About
+              </li>
+              <li
+                onClick={() => {
+                  view(3);
+                }}
+              >
+                Skill
+              </li>
             </ul>
           </div>
         ) : (
           <nav className={Headcss.right}>
-            <a onClick={() => {view(0)}}>Home</a>
-            <a onClick={() => {view(1)}}>Projects</a>
-            <a onClick={() => {view(2)}}>About</a>
-            <a onClick={() => {view(3)}}>Skills</a>
+            <a
+              onClick={() => {
+                view(0);
+              }}
+            >
+              Home
+            </a>
+            <a
+              onClick={() => {
+                view(1);
+              }}
+            >
+              Projects
+            </a>
+            <a
+              onClick={() => {
+                view(2);
+              }}
+            >
+              About
+            </a>
+            <a
+              onClick={() => {
+                view(3);
+              }}
+            >
+              Skills
+            </a>
           </nav>
         )}
       </header>

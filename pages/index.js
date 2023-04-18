@@ -9,12 +9,12 @@ import { useEffect, useState } from "react";
 export default function Home() {
   const [sendP, setSendP] = useState();
   let Scrolls;
-  useEffect(()=>{
-     Scrolls = document.querySelectorAll('section')
-     setSendP(Scrolls);
 
-  },[])
-
+  useEffect(() => {
+    Scrolls = document.querySelectorAll("section");
+    console.log(Scrolls, " 스크롤 ");
+    setSendP(Scrolls);
+  }, []);
 
   return (
     <>
