@@ -1,5 +1,6 @@
 import { Main } from "../component/Main";
 import { About } from "../component/About";
+import { Aboutfix } from "../component/Aboutfix";
 import { Skills } from "../component/Skills";
 import { Newprojects } from "../component/Newprojects";
 import { Footer } from "../component/Footer";
@@ -22,7 +23,7 @@ export default function Home() {
         <Header sendP={sendP}></Header>
         <Main></Main>
         <Newprojects></Newprojects>
-        <About></About>
+        <Aboutfix></Aboutfix>
         <Skills></Skills>
         <Footer></Footer>
       </main>

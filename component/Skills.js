@@ -22,14 +22,13 @@ export const Skills = () => {
       {
         name: "JAVASCRIPT",
         url: "/javascript.png",
-        detail: "Javascript를 사용하여 페이지의 ",
+        detail: "Javascript를 사용하여 페이지의 동적인 페이지르 만들 수 있습니다.",
         alt: "javascript이미지",
       },
       {
         name: "SASS",
         url: "/sass.png",
-        detail:
-          "Sass를 사용하여 css코드들을 보다더 직관적으로 작성 할 수 있고, 변수에 담아 사용 할 수 있습니다.",
+        detail:"Sass를 사용하여 css코드들을 보다더 직관적으로 작성 할 수 있고, 변수에 담아 사용 할 수 있습니다.",
         alt: "sass이미지",
       },
       {
@@ -47,13 +46,13 @@ export const Skills = () => {
       {
         name: "REACT",
         url: "/React.png",
-        detail: "React를 사용하여 ",
+        detail: "React를 사용하여 여러가지 훅과 ",
         alt: "react이미지",
       },
       {
         name: "NEXT.JS",
         url: "/Nextjs.png",
-        detail: "Next.js는 제가 주로 사용하는 react 프레임워크 입니다.",
+        detail: "Next.js는 제가 주로 사용하는 React 프레임워크 입니다. ",
         alt: "next.js이미지",
       },
       {

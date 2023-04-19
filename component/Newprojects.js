@@ -66,10 +66,10 @@ export const Newprojects = () => {
         url: "/project_lol2.png",
         id: 3,
         detail:
-          "React 에서 제공하는 라이브러리인 Nextjs 를 배웠고, CRUD를 활용하여 로그인기능 , 플레이리스트 기능을 ... <내용 추가 예정",
+          "React 에서 제공하는 라이브러리인 Nextjs 를 배웠고, SpotfiyApi를 사용하였습니다.  CRUD를 활용하여 로그인기능을 구현했습니다. 프로젝트 수정중 ",
         skills:
           "React, Next.js, mySQL, Spotify API 사용 CloudType을 이용하여 사이트 배포 <내용 추가 예정",
-        site: "https://suparuu.github.io/Project_jejubeer/",
+        site: "https://port-0-spotifyapi-p8xrq2mlf26usw6.sel3.cloudtype.app/",
         alt: "Spotify Api를 활용한 프로젝트",
       },
       {

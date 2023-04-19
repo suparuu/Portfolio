@@ -17,6 +17,7 @@ export const Main = () => {
         </div>
         <div className={Maincss.whoamI}>
           <p className={Maincss.aspiration}>
+            배운 것을 토대로 코드를 작성하고, 새로운 
             상상한 무궁무진한 아이디어를 제가 배운 기술로 구현해가는 과정이
             재밌습니다. 항상 새로운 시도를 두려워하지 않는 프론트엔드 개발자가
             되겠습니다.
