@@ -3,7 +3,7 @@ import Aboutfixcss from "@/styles/Aboutfixcss.module.scss";
 
 export const Aboutfix = () => {
   const [aboutImg, setAboutImg] = useState();
-  const [mobSize , setMobSize] = useState(false);
+  const [mobSize , setMobSize] = useState(false);//반응형일시 바꾸기
 
   useEffect(() => {
     const datas = [
@@ -66,7 +66,7 @@ export const Aboutfix = () => {
             {aboutImg &&
               aboutImg.map((obj, i) => {
                 return (
-                  <div className={Aboutfixcss.imgBoxs}>
+                  <div className={Aboutfixcss.imgBoxs} key={i}>
                     <div className={Aboutfixcss.imgBox}>
                       <img
                         src={obj.url}

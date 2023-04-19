@@ -25,9 +25,7 @@ export const Header = ({ sendP }) => {
   }, []); //헤더 반응형
 
   function view(i) {
-    console.log(sendP, "asd");
     sendP && sendP[i].scrollIntoView({ behavior: "smooth" });
-    console.log("hello");
   }
 
   function handleClick() {

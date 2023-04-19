@@ -29,11 +29,8 @@ export const Newprojects = () => {
 
   function handleClick() {
     animation.current.classList.add("animate");
-    // animation.current.style = ' opacity : 0; transform : translateY(50%)'
-    console.log("working");
     setTimeout(() => {
       animation.current.classList.remove("animate");
-      // animation.current.style = ' opacity : 1; animation : fadein'
     }, 500);
   }
 
@@ -106,7 +103,7 @@ export const Newprojects = () => {
                         handleExternalLink(obj.site);
                       }}
                     >
-                      자세히 보기
+                      프로젝트 보러가기
                     </div>
                   </>
                 );

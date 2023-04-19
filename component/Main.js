@@ -3,7 +3,7 @@ import Maincss from "@/styles/Maincss.module.scss";
 import { Header } from "./Header";
 
 export const Main = () => {
-  const goToMain = useRef()
+  const goToMain = useRef();
 
   
   return (
