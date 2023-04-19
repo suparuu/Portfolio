@@ -13,7 +13,6 @@ export default function Home() {
 
   useEffect(() => {
     Scrolls = document.querySelectorAll("section");
-    console.log(Scrolls, " 스크롤 ");
     setSendP(Scrolls);
   }, []);
 
