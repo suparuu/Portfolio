@@ -45,7 +45,7 @@ export const Skills = () => {
       },
       {
         name: "REACT",
-        url: "/React.png",
+        url: "/react.png",
         detail: "React를 사용하여 여러가지 훅과 ",
         alt: "react이미지",
       },
