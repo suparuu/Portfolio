@@ -22,7 +22,7 @@ export const Skills = () => {
       {
         name: "JAVASCRIPT",
         url: "/javascript.png",
-        detail: "Javascript를 사용하여 페이지의 동적인 페이지르 만들 수 있습니다.",
+        detail: "Javascript를 사용하여 동적인 페이지를 만들 수 있습니다.",
         alt: "javascript이미지",
       },
       {
@@ -52,7 +52,7 @@ export const Skills = () => {
       {
         name: "NEXT.JS",
         url: "/Nextjs.png",
-        detail: "Next.js는 제가 주로 사용하는 React 프레임워크 입니다. ",
+        detail: "Next.js는 ssr렌더링 방식으로 웹,앱 구현 가능(API,CRUD,DB) ",
         alt: "next.js이미지",
       },
       {
@@ -91,7 +91,7 @@ export const Skills = () => {
         name: "MYSQL",
         url: "/mysql.png",
         detail:
-          "Mysql을 사용하여 DB를 관리하고 CRUD를 사용하여 생성, 읽기, 갱신, 삭제가 가능합니다.",
+          "Mysql을 사용하여 테이블을 생성하고 쿼리를 사옹하여 DB를 관리합니다. ",
         alt: "mysql이미지",
       },
     ]; //javascript 뭘 써야하지 . ?
